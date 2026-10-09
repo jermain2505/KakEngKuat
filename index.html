@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>For Kak Enga ♡ Immanuel</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --pink: #ffc9dc;
+  --rose: #d77e9f;
+  --purple: #a79bd9;
+  --ink: #70576f;
+  --cream: #fffaf5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
+  color: var(--ink);
+  background: linear-gradient(
+    160deg,
+    #dceeff 0%,
+    #fff0f5 48%,
+    #fff6df 100%
+  );
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* BACKGROUND */
+
+#sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 65px;
+  opacity: .7;
+  animation: cloudMove 42s linear infinite;
+}
+
+.cloud:nth-child(1) {
+  top: 7%;
+  left: -130px;
+}
+
+.cloud:nth-child(2) {
+  top: 35%;
+  left: -150px;
+  font-size: 45px;
+  animation-duration: 55s;
+  animation-delay: -20s;
+}
+
+.cloud:nth-child(3) {
+  top: 72%;
+  left: -150px;
+  font-size: 60px;
+  animation-duration: 60s;
+  animation-delay: -35s;
+}
+
+@keyframes cloudMove {
+  to { transform: translateX(calc(100vw + 300px)); }
+}
+
+.star {
+  position: absolute;
+  color: white;
+  animation: twinkle 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; transform: scale(.7) rotate(0); }
+  to { opacity: 1; transform: scale(1.2) rotate(20deg); }
+}
+
+/* CONTENT */
+
+main {
+  position: relative;
+  z-index: 1;
+  width: min(92%, 680px);
+  margin: auto;
+  padding: 35px 0 40px;
+  text-align: center;
+}
+
+.top-note {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ad83a0;
+  margin-bottom: 18px;
+}
+
+.card {
+  padding: clamp(24px, 5vw, 42px);
+  background: rgba(255, 255, 255, .78);
+  border: 2px solid rgba(255,255,255,.95);
+  border-radius: 32px;
+  box-shadow: 0 20px 65px rgba(173, 126, 161, .16);
+  backdrop-filter: blur(12px);
+  animation: enter .9s ease both;
+}
+
+.mascot {
+  display: inline-block;
+  font-size: 56px;
+  animation: bob 3s ease-in-out infinite;
+}
+
+h1 {
+  margin: 13px 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #bd7e9e;
+  font-size: clamp(34px, 8vw, 49px);
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  color: #ad81b8;
+  font-size: 22px;
+  margin: 20px 0 12px;
+}
+
+p {
+  line-height: 1.9;
+}
+
+.intro {
+  font-size: 15px;
+  margin: 14px 0;
+}
+
+.pink-text {
+  color: #ce779c;
+  font-weight: 800;
+}
+
+.love-line {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 9px 15px;
+  border-radius: 20px;
+  background: #ffe5ee;
+  color: #b86f92;
+  font-weight: 800;
+}
+
+.divider {
+  width: 65px;
+  height: 3px;
+  border-radius: 10px;
+  background: #f3ccdd;
+  margin: 23px auto;
+}
+
+/* VERSE */
+
+.verse {
+  padding: 18px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f2edff, #fff0f5);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.verse strong {
+  display: block;
+  color: #b57eaa;
+  margin-top: 8px;
+}
+
+/* QUESTION */
+
+.question {
+  margin-top: 26px;
+  padding: 23px 15px;
+  background: #fff6fa;
+  border-radius: 24px;
+  border: 1px dashed #e8b8d0;
+}
+
+.question-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #a9769a;
+  margin-bottom: 8px;
+}
+
+.question-sub {
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  min-width: 125px;
+  padding: 13px 23px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 800;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px #d8b4cc55;
+}
+
+.btn:active {
+  transform: scale(.95);
+}
+
+.btn-yes {
+  color: #8e5271;
+  background: #ffd9e7;
+  border-color: #edb0c8;
+}
+
+.btn-no {
+  color: #716ca2;
+  background: #e5e4ff;
+  border-color: #c7c5ee;
+}
+
+/* RESULT */
+
+#result {
+  display: none;
+  margin-top: 25px;
+  padding: 22px 15px;
+  border-radius: 24px;
+  background: linear-gradient(140deg, #fff0f5, #fff8e8);
+}
+
+#result.show {
+  display: block;
+  animation: pop .7s cubic-bezier(.2,.8,.3,1.4);
+}
+
+.big-heart {
+  display: inline-block;
+  font-size: 88px;
+  filter: drop-shadow(0 8px 12px #eaa5bf55);
+  animation: heartBeat 1.4s ease-in-out infinite;
+}
+
+#resultTitle {
+  color: #bf769a;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#resultText {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.small-note {
+  color: #ad88a4;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+/* BUTTON PRAYER */
+
+.prayer-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #f1e9ff;
+  border: 1px solid #d6c6f2;
+  color: #8873aa;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#prayer {
+  display: none;
+  margin-top: 15px;
+  padding: 17px;
+  border-radius: 18px;
+  background: white;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+#prayer.show {
+  display: block;
+  animation: enter .6s ease;
+}
+
+footer {
+  padding: 23px 5px 0;
+  color: #ad8ba2;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* FLOATING EMOJI */
+
+.floaty {
+  position: fixed;
+  z-index: 5;
+  bottom: -40px;
+  pointer-events: none;
+  animation: rise linear forwards;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0) scale(.6);
+    opacity: 0;
+  }
+  15% { opacity: 1; }
+  100% {
+    transform: translateY(-110vh) rotate(45deg) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes bob {
+  0%,100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes heartBeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { opacity: 0; transform: scale(.6); }
+  75% { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ACCESSIBILITY */
+
+@media (max-width: 480px) {
+  main { padding-top: 24px; }
+  .card { padding: 24px 17px; }
+  .intro { font-size: 14px; }
+  .question-title { font-size: 20px; }
+  .btn { min-width: 112px; padding: 12px 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="sky" aria-hidden="true">
+  <div class="cloud">☁️</div>
+  <div class="cloud">☁️</div>
+  <div class="cloud">☁️</div>
+</div>
+
+<main>
+  <p class="top-note">A LITTLE LOVE FOR YOU ♡</p>
+
+  <section class="card">
+
+    <div class="mascot">🧸💗</div>
+
+    <h1>Semangat yaaa,<br>Kak Enga!</h1>
+
+    <p class="intro">
+      Heiiii Kak Enggg 🥹🤍
+      <br>
+      Lagi sakit yaaa? Siniii, ada surat kecil buat Kak Enga.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="intro">
+      Kak Enga, istirahat yang cukup yaaaa.
+      Jangan terlalu memaksakan diri dulu.
+      Nggak apa-apa kalau hari ini Kak Enga perlu
+      lebih banyak istirahat.
+    </p>
+
+    <p class="intro">
+      Semoga badan Kak Enga makin enakan,
+      rasa nggak nyamannya berkurang, dan
+      Kak Enga bisa pulih pelan-pelan yaaa. 🌷
+    </p>
+
+    <div class="love-line">
+      KAK ENGA ANAK PAPI JESUS JUGAAAA 🥹💗
+    </div>
+
+    <p class="intro">
+      Kak Enga nggak harus selalu kuat setiap saat.
+      Kalau capek, istirahat dulu.
+      Kalau sedih, nggak apa-apa.
+      Kalau takut, boleh cerita sama Papi Jesus.
+    </p>
+
+    <p class="intro">
+      Kita doain yang baik-baik yaaa.
+      Satu hari, satu langkah, pelan-pelan aja.
+      Kak Enga nggak sendirian kokkk. 🤍
+    </p>
+
+    <div class="verse">
+      "Janganlah takut, sebab Aku menyertai engkau,
+      janganlah bimbang, sebab Aku ini Allahmu."
+      <strong>Yesaya 41:10 ♡</strong>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="question">
+      <p class="question-title">
+        Kak Enga semangat nggak hari ini? 🥺
+      </p>
+
+      <p class="question-sub">
+        Jawab jujur aja yaaa, Kak Enggg ♡
+      </p>
+
+      <div class="buttons">
+        <button class="btn btn-yes" onclick="answer('yes')">
+          Semangaaat! 💪🏻
+        </button>
+
+        <button class="btn btn-no" onclick="answer('no')">
+          Belum nih 🥺
+        </button>
+      </div>
+    </div>
+
+    <div id="result" aria-live="polite">
+      <div class="big-heart" id="heart">💗</div>
+
+      <h2 id="resultTitle">Kak Enga disayanggg!</h2>
+
+      <p id="resultText"></p>
+
+      <p class="small-note">
+        Peluk jauhhhh buat Kak Enga 🫂💕
+      </p>
+    </div>
+
+    <button class="prayer-btn" onclick="togglePrayer()">
+      💌 Klik kalau mau doa bareng
+    </button>
+
+    <div id="prayer">
+      <p>
+        Papi Jesus yang baik 🤍
+        <br><br>
+        Tolong sertai Kak Enga dalam masa pemulihannya.
+        Berikan kekuatan saat tubuhnya terasa lelah,
+        ketenangan saat pikirannya terasa penuh,
+        dan orang-orang yang bisa menemani serta
+        merawatnya dengan penuh kasih.
+        <br><br>
+        Kiranya Kak Enga bisa beristirahat dengan baik
+        dan menjalani proses pemulihan satu hari demi satu hari.
+        <br><br>
+        Terima kasih karena Kak Enga selalu berharga
+        dan dikasihi-Mu.
+        <br><br>
+        Dalam nama Tuhan Yesus, amin. 🤍
+      </p>
+    </div>
+
+    <footer>
+      Immanuel — Allah beserta kita ♡
+      <br>
+      One day at a time, Kak Enga ☁️
+      <br>
+      Made with love & prayers 💗
+    </footer>
+
+  </section>
+</main>
+
+<script>
+const result = document.getElementById('result');
+const resultTitle = document.getElementById('resultTitle');
+const resultText = document.getElementById('resultText');
+const heart = document.getElementById('heart');
+const prayer = document.getElementById('prayer');
+
+function answer(choice) {
+  if (choice === 'yes') {
+    resultTitle.textContent = 'WAAA SEMANGATTT! 💗';
+    resultText.innerHTML =
+      'Nahhh, itu diaaa Kak Enga! 🥹💪🏻<br>' +
+      'Tetap semangat yaaa, tapi jangan lupa istirahat juga.<br>' +
+      'Nggak perlu buru-buru pulih dalam sehari.<br>' +
+      'Pelan-pelan aja, lakukan yang Kak Enga mampu.<br>' +
+      '<strong>Immanuel! Papi Jesus beserta Kak Enga. 🤍</strong>';
+    heart.textContent = '💖';
+  } else {
+    resultTitle.textContent = 'Siniii, peluk dulu 🫂💗';
+    resultText.innerHTML =
+      'Nggak apa-apa, Kak Enga. 🥺🤍<br>' +
+      'Kak Enga nggak harus merasa kuat setiap saat.<br>' +
+      'Kalau lagi capek, istirahat dulu yaaa.<br>' +
+      'Hari ini cukup jalani satu langkah kecil aja.<br>' +
+      'Boleh minta ditemani, boleh cerita, boleh berdoa.<br>' +
+      '<strong>Kak Enga tetap berharga, tetap dikasihi, ' +
+      'dan nggak sendirian. Immanuel! 🤍</strong>';
+    heart.textContent = '💗';
+  }
+
+  result.classList.remove('show');
+
+  // Restart animasi supaya love muncul setiap tombol ditekan
+  void result.offsetWidth;
+  result.classList.add('show');
+
+  showerLove();
+}
+
+function togglePrayer() {
+  prayer.classList.toggle('show');
+
+  if (prayer.classList.contains('show')) {
+    showerLove();
+  }
+}
+
+function showerLove() {
+  const symbols = [
+    '💗', '💕', '🤍', '💖',
+    '🌸', '✨', '🩷', '🫶🏻', '☁️'
+  ];
+
+  // Hati muncul bertahap, bukan sekaligus
+  for (let i = 0; i < 32; i++) {
+    setTimeout(() => {
+      const item = document.createElement('span');
+
+      item.className = 'floaty';
+      item.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      item.style.left = Math.random() * 100 + 'vw';
+      item.style.fontSize = (17 + Math.random() * 22) + 'px';
+      item.style.animationDuration = (3 + Math.random() * 3) + 's';
+
+      document.body.appendChild(item);
+
+      item.addEventListener('animationend', () => {
+        item.remove();
+      });
+    }, i * 65);
+  }
+}
+
+// Bintang-bintang kecil di langit
+const sky = document.getElementById('sky');
+
+for (let i = 0; i < 28; i++) {
+  const star = document.createElement('span');
+
+  star.className = 'star';
+  star.textContent = Math.random() > 0.5 ? '✦' : '·';
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+  star.style.fontSize = (12 + Math.random() * 17) + 'px';
+  star.style.animationDelay = Math.random() * 3 + 's';
+
+  sky.appendChild(star);
+}
+
+// Beberapa love kecil muncul sesekali
+const reducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
+
+if (!reducedMotion) {
+  setInterval(() => {
+    if (document.hidden) return;
+
+    const item = document.createElement('span');
+    item.className = 'floaty';
+    item.textContent = ['♡', '✨', '🤍'][
+      Math.floor(Math.random() * 3)
+    ];
+    item.style.left = Math.random() * 100 + 'vw';
+    item.style.fontSize = '20px';
+    item.style.animationDuration = '5s';
+
+    document.body.appendChild(item);
+
+    item.addEventListener('animationend', () => item.remove());
+  }, 3500);
+}
+</script>
+
+</body>
+</html>
